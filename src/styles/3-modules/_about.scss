@@ -1,0 +1,30 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 2rem;
+  h1 {
+    font-size: 3rem;
+  }
+
+  &-box {
+    width: 88%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: $blue-50;
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about-container {
+    padding-top: 2rem;
+  }
+}

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Asap";
+  src: url("../../../public/Asap-Regular.ttf") format("truetype");
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Asap";
+}
+
+body.dark {
+  background-color: white;
+  h1 {
+    color: $darkMode;
+  }
+  p {
+    color: $darkMode;
+  }
+}
+
+body.light {
+  background-color: $darkMode;
+  h1 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  background-color: transparent;
+}
+
+input {
+  outline: none;
+  border: 1.5px solid #000;
+}
