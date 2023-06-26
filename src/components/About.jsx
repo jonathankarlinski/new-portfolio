@@ -7,7 +7,7 @@ function About() {
   return (
     <section
       className={`about-container ${darkMode}`} 
-      id='about'>
+      id='SOBRE MIM'>
       <h1>SOBRE MIM</h1>
       <div className="about-container-box">
         <p>

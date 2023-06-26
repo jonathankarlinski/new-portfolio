@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import clipboardCopy from 'clipboard-copy';
 import AppProvider from '../context/AppContext';
+import Image from 'next/image';
 
 
 function Footer() {
@@ -17,8 +18,8 @@ function Footer() {
   };
   return (
     <section
-      className={`footer-container ${darkMode}`} 
-      id='contact'>
+      className={`footer-container ${darkMode}`}
+      id='CONTATO'>
       <p>WEBSITE DESENVOLVIDO POR JONATHAN KARLINSKI</p>
       <div className="footer-container-contact">
         <h1>CONTATO</h1>
@@ -27,19 +28,37 @@ function Footer() {
             type='button'
             onClick={(target) => handleCopy(target)}
           >
-            <img src="https://img.icons8.com/color/48/null/gmail--v1.png" alt='Logo do Gmail' />
+            <Image
+              width="50"
+              height="50"
+              sizes="100vw"
+              src={'/images/iconGmail.png'}
+              alt='Logo do Gmail'
+            />
           </button>
           <a
             href='https://www.linkedin.com/in/jonathankarlinski/'
             target="_blank" rel="noreferrer"
           >
-            <img src="https://img.icons8.com/color/48/null/linkedin.png" alt='Logo do Linkedin' />
+            <Image
+              width="50"
+              height="50"
+              sizes="100vw"
+              src={'/images/iconLinkedin.png'}
+              alt='Logo do Linkedin'
+            />
           </a>
           <a
             href='https://github.com/jonathankarlinski'
             target="_blank" rel="noreferrer"
           >
-            <img src="https://img.icons8.com/ios-filled/50/null/github.png" alt='Logo do Github' />
+            <Image
+              width="50"
+              height="50"
+              sizes="100vw"
+              src={'/images/iconGithub.png'}
+              alt='Logo do Github'
+            />
           </a>
         </div>
       </div>

@@ -48,6 +48,7 @@ body .header-container {
     align-items: center;
     list-style: none;
     gap: 1rem;
+    cursor: pointer;
 
     a {
       font-size: 1.5rem;
@@ -118,6 +119,8 @@ body .header-container {
     padding: 8px;
   }
   .dropdown-item {
+    cursor: pointer;
+
     display: block;
     padding: 3px;
     text-decoration: none;

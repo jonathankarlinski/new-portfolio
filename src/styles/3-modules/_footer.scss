@@ -34,3 +34,9 @@ body .footer-container {
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .footer-container {
+    gap: 0.5rem;
+  }
+}

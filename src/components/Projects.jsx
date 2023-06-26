@@ -1,14 +1,16 @@
 import Image from 'next/image';
+
 import React, { useContext } from 'react'
 import { projectsData } from '../utils/data';
 import AppProvider from '../context/AppContext';
 
 function Projects() {
   const { darkMode } = useContext(AppProvider);
+
   return (
     <section
       className={`projects-container ${darkMode}`}
-      id="projects"
+      id="PROJETOS"
     >
       <h1>PROJETOS</h1>
       <div className="projects-container-projects">
@@ -17,12 +19,14 @@ function Projects() {
             key={project.id}
             className={`projects-container-projects-box  ${project.name === "Em Obras" && "work"}`} >
             <Image
-              src={project.thumbnail}
+              className={'projects-container-projects-box-img'}
+              src={`/images/${project.thumbnail}.png`}
               alt={project.name === "Em Obras"
                 ? 'Imagem de Projeto em obra' : `Imagem do Projeto ${project.name}`}
-              width={100}
-              height={100}
-              layout="responsive"
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
             />
             <div className="projects-container-projects-box-details">
               <h1>{project.name}</h1>
