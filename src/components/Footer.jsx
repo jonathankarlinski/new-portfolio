@@ -9,13 +9,9 @@ function Footer() {
 
   const handleCopy = (target) => {
     alert('Link de email copiado!')
-
     clipboardCopy('jonathankarlinski57@gmail.com');
-
-    setTimeout(() => {
-      target.innerText = 'Share';
-    }, Number('750'));
   };
+
   return (
     <section
       className={`footer-container ${darkMode}`}
