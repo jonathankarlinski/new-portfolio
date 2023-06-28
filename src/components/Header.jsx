@@ -1,14 +1,31 @@
 import React, { useContext, useState, useEffect } from 'react'
 import AppProvider from '../context/AppContext';
 import Image from 'next/image'
-import { parse } from 'url';
 import LinksHeader from './LinksHeader';
 import { useRouter } from 'next/router';
 
 function Header() {
-  const { darkMode, setdarkMode, typeMenu } = useContext(AppProvider);
-  const [notIndex, setNotIndex] = useState(false);
+  const { darkMode, setdarkMode, setTypeMenuOpen, setTypeMenuClose, notIndex, setNotIndex } = useContext(AppProvider);
   const router = useRouter();
+
+  const typeMenu = () => {
+    if (darkMode === 'dark') {
+      setTypeMenuOpen('iconOpenLight')
+      setTypeMenuClose('iconCloseLight')
+    } else {
+      setTypeMenuOpen('iconOpenDark')
+      setTypeMenuClose('iconCloseDark')
+    }
+  }
+
+  useEffect(() => {
+    const url = router.pathname;
+    if (url === '/projeto/[name]') {
+      setNotIndex(false)
+    } else {
+      setNotIndex(true)
+    }
+  });
 
   const typeMode = () => {
     typeMenu()
@@ -23,19 +40,13 @@ function Header() {
     router.back();
   };
 
-  useEffect(() => {
-    const url = parse(window.location.href);
-    const pathname = url.pathname;
-    if (pathname !== '/') {
-      setNotIndex(true)
-    }
-  }, []);
+
 
   return (
     <div id='HOME'>
-      <header className={`header-container ${darkMode}`}>
+      <header className={`header-container ${darkMode} ${notIndex && 'header-fixed'}`}>
         {
-          !notIndex ? <LinksHeader /> :
+          notIndex ? <LinksHeader /> :
             (
               <button
                 onClick={backPreviousPage}>
@@ -60,12 +71,14 @@ function Header() {
         </button>
       </header>
       {
-        !notIndex && (
+        notIndex && (
           <div className='header-container-banner'>
-            <h1>
+            <h1 className="header-container-banner-title">
               OLA!
               <br />
-              BEM-VINDO(A) AO MEU PORTIFÓLIO
+              <span>
+                BEM-VINDO(A) AO MEU PORTIFÓLIO
+              </span>
             </h1>
           </div>
         )

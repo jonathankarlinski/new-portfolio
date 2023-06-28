@@ -19,10 +19,10 @@ body .header-container {
   color: $darkMode;
 }
 
-.light a:hover {
+.light li a:hover {
   color: $darkMode;
 }
-.dark a:hover {
+.dark li a:hover {
   color: white;
 }
 
@@ -33,6 +33,11 @@ body .header-container {
   color: $darkMode;
 }
 
+.header-fixed {
+  position: fixed;
+  z-index: 1000;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -40,8 +45,7 @@ body .header-container {
   width: 100%;
   height: 5rem;
   padding: 1rem 5rem;
-  position: fixed;
-  z-index: 1000;
+
 
   &-links {
     display: flex;
@@ -83,10 +87,16 @@ body .header-container {
   min-height: 100vh;
   width: 100%;
   background-color: $blue-50;
-  h1 {
-    font-size: 80px;
+  &-title {
+    font-size: 90px;
     font-weight: 400;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    span {
+      font-size: 50px;
+      font-weight: 400;
+    }
   }
 }
 

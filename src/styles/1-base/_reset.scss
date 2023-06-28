@@ -7,8 +7,8 @@ html {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-family: "Asap";
-  cursor:default;
+  font-family: "Asap", sans-serif;
+  cursor: default;
 }
 
 body.dark {
@@ -48,9 +48,4 @@ a:visited {
 input {
   outline: none;
   border: 1.5px solid #000;
-}
-
-button {
-  background-color: aqua;
-//   border: none;
 }

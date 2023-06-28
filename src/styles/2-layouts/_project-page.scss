@@ -1,0 +1,63 @@
+.project-container.light a {
+  background-color: $darkMode;
+  color: white;
+}
+.project-container.dark a {
+  background-color: white;
+  color: black;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: 100%;
+  
+  &-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue-50;
+    border-radius: 1rem;
+    width: 80%;
+    
+    &-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      gap: 2rem;
+
+      &-title {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+
+      &-infos {
+        p {
+          text-align: center;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
+
+      &-button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
+        a {
+          border: 0.1rem solid transparent;
+          font-weight: 600;
+          border-radius: 0.5rem;
+          font-size: 1.2rem;
+          height: 2rem;
+          padding: 0.2rem;
+
+        }
+      }
+    }
+  }
+}

@@ -2,11 +2,18 @@ body .footer-container {
   background-color: $blue-50;
 }
 
+.footer-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
 .footer-container {
   width: 100%;
   height: 6rem;
   display: flex;
   align-items: center;
+  width: 100%;
 
   p {
     text-align: center;

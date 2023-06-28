@@ -7,7 +7,6 @@ import AppProvider from '../context/AppContext';
 function LinksHeader() {
   const { handleToggle, isOpen, typeMenuOpen, typeMenuClose } = useContext(AppProvider);
   const [windowWidth, setWindowWidth] = useState(null);
-  console.log('');
 
   useEffect(() => {
     function handleResize() {

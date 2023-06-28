@@ -5,16 +5,16 @@ import Image from 'next/image';
 
 
 function Footer() {
-  const { darkMode } = useContext(AppProvider);
+  const { darkMode, notIndex } = useContext(AppProvider);
 
-  const handleCopy = (target) => {
+  const handleCopy = () => {
     alert('Link de email copiado!')
     clipboardCopy('jonathankarlinski57@gmail.com');
   };
 
   return (
     <section
-      className={`footer-container ${darkMode}`}
+      className={`footer-container ${darkMode} ${!notIndex && 'footer-fixed'}`}
       id='CONTATO'>
       <p>WEBSITE DESENVOLVIDO POR JONATHAN KARLINSKI</p>
       <div className="footer-container-contact">
@@ -22,7 +22,7 @@ function Footer() {
         <div className="footer-container-contact-icon">
           <button
             type='button'
-            onClick={(target) => handleCopy(target)}
+            onClick={() => handleCopy()}
           >
             <Image
               width="50"

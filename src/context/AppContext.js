@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { createContext, useState, useEffect, useMemo } from 'react';
-
+import React, { createContext, useState, useEffect, useMemo, useCallback } from 'react';
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
@@ -8,6 +7,7 @@ export const AppProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [typeMenuOpen, setTypeMenuOpen] = useState('iconOpenDark');
   const [typeMenuClose, setTypeMenuClose] = useState('iconCloseDart');
+  const [notIndex, setNotIndex] = useState(true);
 
   useEffect(() => {
     if (darkMode === 'light') {
@@ -19,33 +19,26 @@ export const AppProvider = ({ children }) => {
     }
   }, [darkMode]);
 
-  
-  const typeMenu = () => {
-    if (darkMode === 'dark') {
-      setTypeMenuOpen('iconOpenLight')
-      setTypeMenuClose('iconCloseLight')
-    } else {
-      setTypeMenuOpen('iconOpenDark')
-      setTypeMenuClose('iconCloseDark')
-    }
-  }
+  const handleToggle = useCallback(() => {
+    setIsOpen((prevState) => !prevState);
+  }, []);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+  const foo = useMemo(() => ({
+    darkMode,
+    setdarkMode,
+    handleToggle,
+    typeMenuOpen,
+    typeMenuClose,
+    isOpen,
+    setTypeMenuOpen,
+    setTypeMenuClose,
+    notIndex,
+    setNotIndex
+  }), [darkMode, handleToggle, isOpen, notIndex, typeMenuClose, typeMenuOpen]);
 
   return (
     <div>
-      <AppContext.Provider
-        value={{
-          darkMode,
-          setdarkMode,
-          handleToggle,
-          typeMenuOpen,
-          typeMenuClose,
-          isOpen,
-          typeMenu
-        }}>
+      <AppContext.Provider value={foo}>
         {children}
       </AppContext.Provider>
     </div>

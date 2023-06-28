@@ -19,8 +19,9 @@ function Projects() {
             key={project.id}
             className={`projects-container-projects-box  ${project.name === "Em Obras" && "work"}`} >
             <Link
-            style={{ backgroundColor: '#3E7BA3' }}
-            href={`/${project.name}`}
+              style={{ backgroundColor: '#3E7BA3' }}
+              href={`/projeto/${project.name}`}
+
             >
               <Image
                 className={'projects-container-projects-box-img'}
@@ -37,29 +38,25 @@ function Projects() {
               <h1>{project.name}</h1>
               <p>{project.description}</p>
             </div>
-            {
-            project.name === "Em Obras" ? "" : (
-              <div className="projects-container-projects-box-button">
-                {project.linkProject &&
-                  <a
-                    href={project.linkProject}
-                    target="_blank" rel="noreferrer"
-                  >
-                    Testar Projeto
-                  </a>
-                }
+            <div className="projects-container-projects-box-button">
+              {project.linkProject &&
                 <a
-                  href={project.linkRepository}
+                  href={project.linkProject}
                   target="_blank" rel="noreferrer"
                 >
-                  Repositorio
+                  Testar Projeto
                 </a>
-              </div>
-            )
-          }
+              }
+              <a
+                href={project.linkRepository}
+                target="_blank" rel="noreferrer"
+              >
+                Repositorio
+              </a>
+            </div>
           </div>
         ))}
-    </div>
+      </div>
     </section >
   );
 }
