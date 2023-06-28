@@ -3,11 +3,12 @@ import Head from 'next/head'
 import { useRouter } from 'next/router';
 import { projectsData } from '../utils/data';
 import { parse } from 'url';
+import Header from '@/components/Header';
 
 export default function ProjectPage() {
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
+
   const router = useRouter();
-  
   const getProjectByName = (name) => {
     return projectsData.find((project) => project.validateUrl === name) || null;
   };
@@ -17,7 +18,7 @@ export default function ProjectPage() {
     const stringDecodificada = decodeURIComponent(stringSemBarra);
     if (!getProjectByName(stringDecodificada) || stringDecodificada.toLocaleLowerCase() !== (getProjectByName(stringDecodificada).name).toLocaleLowerCase()
     ) {
-      router.push('/pagina-de-erro');
+      router.push('404');
     }
     setData(getProjectByName(stringDecodificada))
   }
@@ -30,12 +31,13 @@ export default function ProjectPage() {
     }
   }, []);
 
+  // console.log('ppppppppppppppp', data);
   return (
     <>
       <Head>
-        <title>{data.name}</title>
+        <title>{`Projeto ${data.name}`}</title>
       </Head>
-      <div>Detalhes do Projeto</div>
+      <Header />
     </>
   )
 }

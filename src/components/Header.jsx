@@ -1,26 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react'
 import AppProvider from '../context/AppContext';
-import { Link } from 'react-scroll';
 import Image from 'next/image'
-import { itensButtonHeader } from '../utils/data';
+import { parse } from 'url';
+import LinksHeader from './LinksHeader';
+import { useRouter } from 'next/router';
 
 function Header() {
-  const { darkMode, setdarkMode } = useContext(AppProvider);
-  const [isOpen, setIsOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(null);
-  const [typeMenuOpen, setTypeMenuOpen] = useState('iconOpenDark');
-  const [typeMenuClose, setTypeMenuClose] = useState('iconCloseDart');
-
-
-  const typeMenu = () => {
-    if (darkMode === 'dark') {
-      setTypeMenuOpen('iconOpenLight')
-      setTypeMenuClose('iconCloseLight')
-    } else {
-      setTypeMenuOpen('iconOpenDark')
-      setTypeMenuClose('iconCloseDart')
-    }
-  }
+  const { darkMode, setdarkMode, typeMenu } = useContext(AppProvider);
+  const [notIndex, setNotIndex] = useState(false);
+  const router = useRouter();
 
   const typeMode = () => {
     typeMenu()
@@ -31,76 +19,33 @@ function Header() {
     }
   }
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
+  const backPreviousPage = () => {
+    router.back();
   };
 
   useEffect(() => {
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
+    const url = parse(window.location.href);
+    const pathname = url.pathname;
+    if (pathname !== '/') {
+      setNotIndex(true)
     }
-    window.addEventListener('resize', handleResize);
-    setWindowWidth(window.innerWidth);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
   }, []);
 
   return (
     <div id='HOME'>
       <header className={`header-container ${darkMode}`}>
-        {windowWidth < 800 ? (
-          <div className="header-container-dropdown">
-            <button className="header-container-dropdown-button" onClick={handleToggle}>
-              <Image
-                height={100}
-                width={100}
-                priority
-                src={`/images/${!isOpen ? typeMenuOpen : typeMenuClose}.png`}
-                alt={`icone de menu ${!isOpen ? 'fechado' : 'aberto'}`}
-              />
-            </button>
-            {isOpen && (
-              <div className='dropdown-menu' >
-                <ul>
-                  {itensButtonHeader.map((item) => (
-                    <li className='dropdown-item' key={item.name}>
-                      <Link activeClass="active"
-                        to={item.name}
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                        onClick={handleToggle}
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {
+          !notIndex ? <LinksHeader /> :
+            (
+              <button
+                onClick={backPreviousPage}>
+                <Image
+                  src={`/images/${darkMode === 'dark' ? 'iconBackDark' : 'iconBackLight'}.png`}
+                  width={100}
+                  height={100}
+                  alt={`icone de ${darkMode === 'dark' ? 'lua' : 'sol'}`}
+                /></button>
             )}
-          </div>
-        ) : (
-          <nav>
-            <ul className="header-container-links" >
-              {itensButtonHeader.map((item) => (
-                <li key={item.name}>
-                  <Link activeClass="active"
-                    to={item.name}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    onClick={handleToggle}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
         <button
           className={`${darkMode}`}
           type='butoon'
@@ -114,13 +59,17 @@ function Header() {
           />
         </button>
       </header>
-      <div className='header-container-banner'>
-        <h1>
-          OLA!
-          <br />
-          BEM-VINDO(A) AO MEU PORTIFÓLIO
-        </h1>
-      </div>
+      {
+        !notIndex && (
+          <div className='header-container-banner'>
+            <h1>
+              OLA!
+              <br />
+              BEM-VINDO(A) AO MEU PORTIFÓLIO
+            </h1>
+          </div>
+        )
+      }
     </div >
   );
 }

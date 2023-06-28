@@ -19,6 +19,7 @@ function Projects() {
             key={project.id}
             className={`projects-container-projects-box  ${project.name === "Em Obras" && "work"}`} >
             <Link
+            style={{ backgroundColor: '#3E7BA3' }}
             href={`/${project.name}`}
             >
               <Image

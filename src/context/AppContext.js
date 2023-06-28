@@ -5,6 +5,9 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [darkMode, setdarkMode] = useState('dark');
+  const [isOpen, setIsOpen] = useState(false);
+  const [typeMenuOpen, setTypeMenuOpen] = useState('iconOpenDark');
+  const [typeMenuClose, setTypeMenuClose] = useState('iconCloseDart');
 
   useEffect(() => {
     if (darkMode === 'light') {
@@ -16,12 +19,34 @@ export const AppProvider = ({ children }) => {
     }
   }, [darkMode]);
 
-  const foo = useMemo(() => ({ darkMode, setdarkMode } ), [darkMode]);
+  
+  const typeMenu = () => {
+    if (darkMode === 'dark') {
+      setTypeMenuOpen('iconOpenLight')
+      setTypeMenuClose('iconCloseLight')
+    } else {
+      setTypeMenuOpen('iconOpenDark')
+      setTypeMenuClose('iconCloseDark')
+    }
+  }
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div>
-      <AppContext.Provider value={foo }>
-        { children }
+      <AppContext.Provider
+        value={{
+          darkMode,
+          setdarkMode,
+          handleToggle,
+          typeMenuOpen,
+          typeMenuClose,
+          isOpen,
+          typeMenu
+        }}>
+        {children}
       </AppContext.Provider>
     </div>
   );

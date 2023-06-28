@@ -9,7 +9,6 @@ html {
   flex-direction: column;
   font-family: "Asap";
   cursor:default;
-
 }
 
 body.dark {
@@ -49,4 +48,9 @@ a:visited {
 input {
   outline: none;
   border: 1.5px solid #000;
+}
+
+button {
+  background-color: aqua;
+//   border: none;
 }
