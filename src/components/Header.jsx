@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import AppProvider from '../context/AppContext';
 import Image from 'next/image'
 import LinksHeader from './LinksHeader';

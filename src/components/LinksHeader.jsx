@@ -6,21 +6,21 @@ import AppProvider from '../context/AppContext';
 
 function LinksHeader() {
   const { handleToggle, isOpen, typeMenuOpen, typeMenuClose } = useContext(AppProvider);
-  const [windowWidth, setWindowWidth] = useState(null);
+  const [windowOpen, setWindowOpen] = useState(false);
 
   useEffect(() => {
     function handleResize() {
-      setWindowWidth(window.innerWidth);
+      setWindowOpen(true);
     }
     window.addEventListener('resize', handleResize);
-    setWindowWidth(window.innerWidth);
+    setWindowOpen(false);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
   return (
     <>
-      {windowWidth < 800 ? (
+      {windowOpen ? (
         <div className="header-container-dropdown">
           <button className="header-container-dropdown-button" onClick={handleToggle}>
             <Image
