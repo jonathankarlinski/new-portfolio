@@ -24,7 +24,7 @@ export default function ProjectPage() {
   useEffect(() => {
     const url = parse(window.location.href);
     const pathname = decodeURIComponent(url.pathname).replace('/projetos/', '').toLocaleLowerCase()
-    !getProjectByName(pathname)
+    !getProjectByName(pathname);
     setData(JSON.parse(getCookie('value')));
   }, []);
 
