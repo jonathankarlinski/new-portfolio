@@ -1,29 +1,22 @@
 import React, { useEffect, useState, useContext } from 'react';
-import Head from 'next/head'
-import { useRouter } from 'next/router';
-import Header from '@/components/Header';
-import { projectsData } from '@/utils/data';
-import Footer from '@/components/Footer';
-import Image from 'next/image';
 import AppProvider from '../../context/AppContext';
+import Head from 'next/head'
+import Image from 'next/image';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { getCookie } from '../../utils/cookies';
 
 export default function ProjectPage() {
   const { darkMode } = useContext(AppProvider);
-  const router = useRouter();
-  const { name } = router.query;
   const [data, setData] = useState({});
 
-  const getProjectByName = (res) => {
-    return projectsData.find((project) => project.name === res) || null;
-  };
-
   useEffect(() => {
-    if (!getProjectByName(name)
-    ) {
+    const value =  JSON.parse(getCookie('value'));
+    if (!value.name) {
       router.push('/404');
     }
-    return setData(getProjectByName(name))
-  }, [name, router]);
+    return setData(value)
+  }, []);
 
   return (
     <>
@@ -47,7 +40,7 @@ export default function ProjectPage() {
               <h1>{data.name}</h1>
             </div>
             <div className='project-container-box-details-infos'>
-            <p>{data.description}</p>
+              <p>{data.description}</p>
             </div>
             <div className='project-container-box-details-button'>
               {data.linkProject &&

@@ -51,6 +51,11 @@
       flex-direction: column;
       border-radius: 1rem;
 
+      button {
+        background: none;
+        border: none;
+      }
+
       &-img {
         cursor: pointer;
         border-radius: 1rem;

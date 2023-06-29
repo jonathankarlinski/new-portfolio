@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import AppProvider from '../context/AppContext';
+import { useRouter } from 'next/router';
 import Image from 'next/image'
 import LinksHeader from './LinksHeader';
-import { useRouter } from 'next/router';
 
 function Header() {
   const { darkMode, setdarkMode, setTypeMenuOpen, setTypeMenuClose, notIndex, setNotIndex } = useContext(AppProvider);
@@ -20,7 +20,7 @@ function Header() {
 
   useEffect(() => {
     const url = router.pathname;
-    if (url === '/projeto/[name]') {
+    if (url === '/projetos/[name]') {
       setNotIndex(false)
     } else {
       setNotIndex(true)
@@ -67,6 +67,7 @@ function Header() {
             width={100}
             height={100}
             alt={`icone de ${darkMode === 'dark' ? 'lua' : 'sol'}`}
+            priority
           />
         </button>
       </header>
