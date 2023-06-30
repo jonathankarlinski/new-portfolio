@@ -21,7 +21,8 @@ function Projects() {
             <Link
               style={{ backgroundColor: '#3E7BA3' }}
               href={`/projetos/${project.name}`}
-
+              rel="preload"
+              preload={true.toString()}
             >
               <Image
                 className={'projects-container-projects-box-img'}

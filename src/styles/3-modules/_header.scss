@@ -46,6 +46,19 @@ body .header-container {
   height: 5rem;
   padding: 1rem 5rem;
 
+  &-back {
+    padding: 1rem;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
   &-links {
     display: flex;
     align-items: center;
@@ -58,6 +71,7 @@ body .header-container {
       font-weight: 600;
     }
   }
+
   button {
     background: none;
     border: none;

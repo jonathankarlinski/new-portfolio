@@ -46,14 +46,18 @@ function Header() {
         {
           notIndex ? <LinksHeader /> :
             (
-              <button
-                onClick={backPreviousPage}>
-                <Image
-                  src={`/images/${darkMode === 'dark' ? 'iconBackDark' : 'iconBackLight'}.png`}
-                  width={100}
-                  height={100}
-                  alt={`icone de ${darkMode === 'dark' ? 'lua' : 'sol'}`}
-                /></button>
+              <div className='header-container-back'>
+                <button
+                  onClick={backPreviousPage}>
+                  <Image
+                    src={`/images/${darkMode === 'dark' ? 'iconBackDark' : 'iconBackLight'}.png`}
+                    width={100}
+                    height={100}
+                    alt={`icone de ${darkMode === 'dark' ? 'lua' : 'sol'}`}
+                  />
+                <p>Voltar</p>
+                </button>
+              </div>
             )}
         <button
           className={`${darkMode}`}

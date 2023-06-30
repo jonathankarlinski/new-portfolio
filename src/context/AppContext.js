@@ -54,7 +54,15 @@ export const AppProvider = ({ children }) => {
     setNotIndex,
     windowWidth,
     setWindowWidth
-  }), [darkMode, handleToggle, isOpen, notIndex, typeMenuClose, typeMenuOpen, windowWidth]);
+  }), [
+    darkMode,
+    handleToggle,
+    isOpen,
+    notIndex,
+    typeMenuClose,
+    typeMenuOpen,
+    windowWidth
+  ]);
 
   return (
     <div>

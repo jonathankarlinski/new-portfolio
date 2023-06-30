@@ -86,7 +86,8 @@
       }
       &-button {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 2.5rem;
         align-items: center;
         width: 100%;
         a {
@@ -94,19 +95,34 @@
           align-items: center;
           justify-content: center;
           border: 0.1rem solid transparent;
-          font-weight: 600;
           border-radius: 0.5rem;
+          font-weight: 600;
           font-size: 1rem;
           height: 1.5rem;
           padding: 0.2rem;
-          width: 40%;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .projects-container {
+    &-projects {
+      &-box {
+        &-button {
+          justify-content: space-around;
+          gap: 0rem;
+          a {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
   .projects-container {
     padding-top: 1rem;
 
@@ -120,6 +136,15 @@
         width: 90%;
         &:hover {
           transform: none;
+        }
+
+        &-button {
+          justify-content: space-around;
+          gap: 0rem;
+          a {
+            font-size: 0.9rem;
+            width: 40%;
+          }
         }
       }
     }

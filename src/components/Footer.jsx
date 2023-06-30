@@ -49,12 +49,12 @@ function Footer() {
             target="_blank" rel="noreferrer"
           >
             <Image
-              width="50"
-              height="50"
+              width='50'
+              height='50'
               sizes="100vw"
               src={'/images/iconGithub.png'}
               alt='Logo do Github'
-              priority
+              loading="lazy"
             />
           </a>
         </div>

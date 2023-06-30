@@ -45,7 +45,6 @@ export default function ProjectPage() {
             height="0"
             sizes="100vw"
             style={{ width: dynamicWidth, height: 'auto', borderRadius: '1rem' }}
-          priority
           />
           <div className='project-container-box-details'>
             <div className='project-container-box-details-title'>
