@@ -1,13 +1,14 @@
-import PropTypes from 'prop-types';
 import React, { createContext, useState, useEffect, useMemo, useCallback } from 'react';
 const AppContext = createContext();
+import PropTypes from 'prop-types';
 
 export const AppProvider = ({ children }) => {
-  const [darkMode, setdarkMode] = useState('dark');
+  const [notIndex, setNotIndex] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(null);
+  const [darkMode, setdarkMode] = useState('dark');
   const [typeMenuOpen, setTypeMenuOpen] = useState('iconOpenDark');
   const [typeMenuClose, setTypeMenuClose] = useState('iconCloseDart');
-  const [notIndex, setNotIndex] = useState(true);
 
   useEffect(() => {
     if (darkMode === 'light') {
@@ -18,6 +19,23 @@ export const AppProvider = ({ children }) => {
       document.body.classList.add('dark');
     }
   }, [darkMode]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
+    };
+  }, []);
 
   const handleToggle = useCallback(() => {
     setIsOpen((prevState) => !prevState);
@@ -33,8 +51,10 @@ export const AppProvider = ({ children }) => {
     setTypeMenuOpen,
     setTypeMenuClose,
     notIndex,
-    setNotIndex
-  }), [darkMode, handleToggle, isOpen, notIndex, typeMenuClose, typeMenuOpen]);
+    setNotIndex,
+    windowWidth,
+    setWindowWidth
+  }), [darkMode, handleToggle, isOpen, notIndex, typeMenuClose, typeMenuOpen, windowWidth]);
 
   return (
     <div>

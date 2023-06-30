@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import clipboardCopy from 'clipboard-copy';
 import AppProvider from '../context/AppContext';
 import Image from 'next/image';
+import clipboardCopy from 'clipboard-copy';
 
 
 function Footer() {
@@ -54,6 +54,7 @@ function Footer() {
               sizes="100vw"
               src={'/images/iconGithub.png'}
               alt='Logo do Github'
+              priority
             />
           </a>
         </div>

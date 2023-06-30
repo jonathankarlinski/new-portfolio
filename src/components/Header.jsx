@@ -40,8 +40,6 @@ function Header() {
     router.back();
   };
 
-
-
   return (
     <div id='HOME'>
       <header className={`header-container ${darkMode} ${notIndex && 'header-fixed'}`}>

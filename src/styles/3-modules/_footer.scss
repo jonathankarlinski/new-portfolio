@@ -45,4 +45,9 @@ body .footer-container {
   .footer-container {
     gap: 0.5rem;
   }
+  .footer-fixed {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
 }

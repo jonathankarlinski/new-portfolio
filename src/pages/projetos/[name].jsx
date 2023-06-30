@@ -4,29 +4,30 @@ import Head from 'next/head'
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { getCookie, setCookie } from '../../utils/cookies';
 import { parse } from 'url';
+import { getCookie, setCookie } from '../../utils/cookies';
 import { projectsData } from '@/utils/data';
 
 export default function ProjectPage() {
-  const { darkMode } = useContext(AppProvider);
+  const { darkMode, windowWidth } = useContext(AppProvider);
   const [data, setData] = useState({});
 
   const getProjectByName = (url) => {
-    const data = projectsData.find((project) => project.validateUrl === url) || null;
-    if (!data) {
-      router.push('/404');
-    } else {
-      setCookie('value', JSON.stringify(data))
-    }
+    return projectsData.find((project) => project.validateUrl === url) || null;
   }
 
   useEffect(() => {
     const url = parse(window.location.href);
     const pathname = decodeURIComponent(url.pathname).replace('/projetos/', '').toLocaleLowerCase()
-    !getProjectByName(pathname);
+    if (!getProjectByName(pathname)) {
+      router.push('/404');
+    } else {
+      setCookie('value', JSON.stringify(getProjectByName(pathname)))
+    }
     setData(JSON.parse(getCookie('value')));
   }, []);
+
+  const dynamicWidth = ((windowWidth < 800 && windowWidth > 0) ? '100%' : '60%');
 
   return (
     <>
@@ -43,7 +44,8 @@ export default function ProjectPage() {
             width="0"
             height="0"
             sizes="100vw"
-            style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
+            style={{ width: dynamicWidth, height: 'auto', borderRadius: '1rem' }}
+          priority
           />
           <div className='project-container-box-details'>
             <div className='project-container-box-details-title'>

@@ -1,26 +1,15 @@
 import { itensButtonHeader } from '@/utils/data';
 import Image from 'next/image';
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-scroll';
 import AppProvider from '../context/AppContext';
 
 function LinksHeader() {
-  const { handleToggle, isOpen, typeMenuOpen, typeMenuClose } = useContext(AppProvider);
-  const [windowOpen, setWindowOpen] = useState(false);
+  const { handleToggle, isOpen, typeMenuOpen, typeMenuClose, windowWidth } = useContext(AppProvider);
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowOpen(true);
-    }
-    window.addEventListener('resize', handleResize);
-    setWindowOpen(false);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
   return (
     <>
-      {windowOpen ? (
+      {windowWidth < 800 && windowWidth > 0 ? (
         <div className="header-container-dropdown">
           <button className="header-container-dropdown-button" onClick={handleToggle}>
             <Image
