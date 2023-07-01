@@ -20,6 +20,10 @@ function Header() {
   }
 
   useEffect(() => {
+    if (darkMode === undefined) {
+      setCookie('theme', 'dark')
+      setdarkMode(getCookie('theme'))
+    }
     setdarkMode(getCookie('theme'))
     const url = router.pathname;
     if (url === '/projetos/[name]') {

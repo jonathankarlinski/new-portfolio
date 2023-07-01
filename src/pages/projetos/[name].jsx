@@ -32,46 +32,48 @@ export default function ProjectPage() {
   return (
     <>
       <Head>
-        <title>{`Projeto ${data.name}`}</title>
+        <title>{data.name ? `Projeto ${data.name}` : 'Carregando'}</title>
       </Head>
       <Header />
-      <main className={`project-container ${darkMode}`}>
-        <div className='project-container-box'>
-          <Image
-            src={`/images/${data.thumbnail}.png`}
-            alt={data.name === "Em Obras"
-              ? 'Imagem de Projeto em obra' : `Imagem do Projeto ${data.name}`}
-            width="0"
-            height="0"
-            sizes="100vw"
-            style={{ width: dynamicWidth, height: 'auto', borderRadius: '1rem' }}
-          />
-          <div className='project-container-box-details'>
-            <div className='project-container-box-details-title'>
-              <h1>{data.name}</h1>
-            </div>
-            <div className='project-container-box-details-infos'>
-              <p>{data.description}</p>
-            </div>
-            <div className='project-container-box-details-button'>
-              {data.linkProject &&
+      {data.thumbnail && (
+        <main className={`project-container ${darkMode}`}>
+          <div className='project-container-box'>
+            <Image
+              priority
+              src={`/images/${data.thumbnail}.png`}
+              alt={`Imagem do Projeto ${data.name}`}
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: dynamicWidth, height: 'auto', borderRadius: '1rem' }}
+            />
+            <div className='project-container-box-details'>
+              <div className='project-container-box-details-title'>
+                <h1>{data.name}</h1>
+              </div>
+              <div className='project-container-box-details-infos'>
+                <p>{data.description}</p>
+              </div>
+              <div className='project-container-box-details-button'>
+                {data.linkProject &&
+                  <a
+                    href={data.linkProject}
+                    target="_blank" rel="noreferrer"
+                  >
+                    Testar Projeto
+                  </a>
+                }
                 <a
-                  href={data.linkProject}
+                  href={data.linkRepository}
                   target="_blank" rel="noreferrer"
                 >
-                  Testar Projeto
+                  Repositorio
                 </a>
-              }
-              <a
-                href={data.linkRepository}
-                target="_blank" rel="noreferrer"
-              >
-                Repositorio
-              </a>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      )}
       <Footer />
     </>
   )

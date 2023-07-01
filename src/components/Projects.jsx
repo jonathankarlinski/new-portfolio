@@ -17,18 +17,15 @@ function Projects() {
         {projectsData.map((project) => (
           <div
             key={project.id}
-            className={`projects-container-projects-box  ${project.name === "Em Obras" && "work"}`} >
+            className="projects-container-projects-box">
             <Link
               style={{ backgroundColor: '#3E7BA3' }}
               href={`/projetos/${project.name}`}
-              rel="preload"
-              preload={true.toString()}
             >
               <Image
                 className={'projects-container-projects-box-img'}
                 src={`/images/${project.thumbnail}.png`}
-                alt={project.name === "Em Obras"
-                  ? 'Imagem de Projeto em obra' : `Imagem do Projeto ${project.name}`}
+                alt={`Imagem do Projeto ${project.name}`}
                 width="0"
                 height="0"
                 sizes="100vw"
