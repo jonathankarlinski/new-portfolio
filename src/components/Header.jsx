@@ -3,6 +3,7 @@ import AppProvider from '../context/AppContext';
 import { useRouter } from 'next/router';
 import Image from 'next/image'
 import LinksHeader from './LinksHeader';
+import { getCookie, setCookie } from '@/utils/cookies';
 
 function Header() {
   const { darkMode, setdarkMode, setTypeMenuOpen, setTypeMenuClose, notIndex, setNotIndex } = useContext(AppProvider);
@@ -19,6 +20,7 @@ function Header() {
   }
 
   useEffect(() => {
+    setdarkMode(getCookie('theme'))
     const url = router.pathname;
     if (url === '/projetos/[name]') {
       setNotIndex(false)
@@ -30,9 +32,11 @@ function Header() {
   const typeMode = () => {
     typeMenu()
     if (darkMode === 'light') {
-      return setdarkMode('dark')
+      setCookie('theme', 'dark')
+      setdarkMode(getCookie('theme'))
     } else {
-      return setdarkMode('light')
+      setCookie('theme', 'light')
+      setdarkMode(getCookie('theme'))
     }
   }
 
@@ -55,7 +59,7 @@ function Header() {
                     height={100}
                     alt={`icone de ${darkMode === 'dark' ? 'lua' : 'sol'}`}
                   />
-                <p>Voltar</p>
+                  <p>Voltar</p>
                 </button>
               </div>
             )}
