@@ -24,6 +24,15 @@ export const projectsData = [
     thumbnail: 'imgCarShop',
     description: "Nesse projeto foi desenvolvida uma API para gerenciar uma concessionária de veículos, utilizando o banco de dados MongoDB através do framework Mongoose. Foram aplicados os princípios de Programação Orientada a Objetos (POO).",
     linkRepository: "https://github.com/jonathankarlinski/car-shop",
+  },
+  {
+    id: 4,
+    name: "Wallet",
+    validateUrl: 'wallet',
+    thumbnail: 'imgWallet',
+    description: "Neste projeto você vai poder gerir sua carteira de controle de gastos com conversor de moedas.",
+    linkProject: "https://jonathankarlinski.github.io/wallet/#/",
+    linkRepository: "https://github.com/jonathankarlinski/wallet",
   }
 ];
 
