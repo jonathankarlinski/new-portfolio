@@ -33,11 +33,6 @@ body .footer-container {
       font-weight: 600;
     }
 
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
   }
 }
 
@@ -45,6 +40,7 @@ body .footer-container {
   .footer-container {
     gap: 0.5rem;
   }
+
   .footer-fixed {
     position: relative;
     left: 0;

@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'
 import LinksHeader from './LinksHeader';
 import { getCookie, setCookie } from '@/utils/cookies';
+import ButtonEmail from './ButtonEmail';
+import LinkSocial from './LinkSocial';
 
 function Header() {
   const { darkMode, setdarkMode, setTypeMenuOpen, setTypeMenuClose, notIndex, setNotIndex } = useContext(AppProvider);
@@ -81,19 +83,50 @@ function Header() {
           />
         </button>
       </header>
-      {
-        notIndex && (
-          <div className='header-container-banner'>
-            <h1 className="header-container-banner-title">
-              OLA!
+      <div className='header-container-banner'>
+        <div className='header-container-banner-div'>
+          <div className='header-container-banner-div-text'>
+            <p>
+              Olá, Tudo bem?
               <br />
-              <span>
-                BEM-VINDO(A) AO MEU PORTIFÓLIO
-              </span>
-            </h1>
+              <b>
+                Eu sou desenvolvedor web
+              </b>
+              <br />
+              e este é meu portfólio
+            </p>
+            <ul>
+              <li>
+                <ButtonEmail />
+              </li>
+              <li>
+                <LinkSocial
+                  link={'https://www.linkedin.com/in/jonathankarlinski/'}
+                  src={'/images/iconLinkedin.png'}
+                  alt={'Logo do Linkedin'}
+                />
+              </li>
+              <li>
+                <LinkSocial
+                  link={'https://github.com/jonathankarlinski'}
+                  src={'/images/iconGithub.png'}
+                  alt={'Logo do Github'}
+                /></li>
+            </ul>
           </div>
-        )
-      }
+          <div
+            className='header-container-banner-div-image'
+          >
+            <Image
+              src={`/images/ImageBanner.png`}
+              width={500}
+              height={500}
+              alt="imagem do banner"
+              priority
+            />
+          </div>
+        </div>
+      </div>
     </div >
   );
 }

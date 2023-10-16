@@ -45,6 +45,16 @@ a:visited {
   background-color: transparent;
 }
 
+ul {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 input {
   outline: none;
   border: 1.5px solid #000;
