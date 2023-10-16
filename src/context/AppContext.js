@@ -8,7 +8,7 @@ export const AppProvider = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(null);
   const [darkMode, setdarkMode] = useState('dark');
   const [typeMenuOpen, setTypeMenuOpen] = useState('iconOpenDark');
-  const [typeMenuClose, setTypeMenuClose] = useState('iconCloseDart');
+  const [typeMenuClose, setTypeMenuClose] = useState('iconCloseDark');
 
   useEffect(() => {
     if (darkMode === 'light') {

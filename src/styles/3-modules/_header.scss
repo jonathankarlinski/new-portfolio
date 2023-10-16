@@ -226,6 +226,11 @@ body .header-container {
           font-size: 2rem;
         }
       }
+      &-image {
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -234,6 +239,8 @@ body .header-container {
   .header-container-banner {
     &-div {
       margin-top: 4rem;
+      flex-direction: column-reverse;
+
 
       &-text {
         font-size: 1.6rem;

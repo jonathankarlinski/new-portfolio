@@ -27,12 +27,6 @@ function Header() {
       setdarkMode(getCookie('theme'))
     }
     setdarkMode(getCookie('theme'))
-    const url = router.pathname;
-    if (url === '/projetos/[name]') {
-      setNotIndex(false)
-    } else {
-      setNotIndex(true)
-    }
   });
 
   const typeMode = () => {
@@ -46,29 +40,10 @@ function Header() {
     }
   }
 
-  const backPreviousPage = () => {
-    router.back();
-  };
-
   return (
     <div id='HOME'>
       <header className={`header-container ${darkMode} ${notIndex && 'header-fixed'}`}>
-        {
-          notIndex ? <LinksHeader /> :
-            (
-              <div className='header-container-back'>
-                <button
-                  onClick={backPreviousPage}>
-                  <Image
-                    src={`/images/${darkMode === 'dark' ? 'iconBackDark' : 'iconBackLight'}.png`}
-                    width={100}
-                    height={100}
-                    alt={`icone de ${darkMode === 'dark' ? 'lua' : 'sol'}`}
-                  />
-                  <p>Voltar</p>
-                </button>
-              </div>
-            )}
+        <LinksHeader />
         <button
           className={`${darkMode}`}
           type='butoon'
@@ -122,7 +97,6 @@ function Header() {
               width={500}
               height={500}
               alt="imagem do banner"
-              priority
             />
           </div>
         </div>
