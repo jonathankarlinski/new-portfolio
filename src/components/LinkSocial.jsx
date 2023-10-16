@@ -1,7 +1,6 @@
-import React, { useContext } from 'react'
-import AppProvider from '../context/AppContext';
+import React from 'react'
 import Image from 'next/image';
-import ButtonEmail from './ButtonEmail';
+import PropTypes from 'prop-types';
 
 
 function LinkSocial(props) {
@@ -22,5 +21,11 @@ function LinkSocial(props) {
     </a>
   );
 }
+
+LinkSocial.propTypes = {
+  link: PropTypes.string,
+  src: PropTypes.string,
+  alt: PropTypes.string,
+}.isRequired;
 
 export default LinkSocial;

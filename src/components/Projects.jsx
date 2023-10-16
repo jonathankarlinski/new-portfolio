@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import AppProvider from '../context/AppContext';
 import Image from 'next/image';
-import Link from 'next/link';
 import { projectsData } from '../utils/data';
 
 function Projects() {
@@ -18,10 +17,6 @@ function Projects() {
           <div
             key={project.id}
             className="projects-container-projects-box">
-            <Link
-              style={{ backgroundColor: '#3E7BA3' }}
-              href={`/projetos/${project.name}`}
-            >
               <Image
                 className={'projects-container-projects-box-img'}
                 src={`/images/${project.thumbnail}.png`}
@@ -31,7 +26,6 @@ function Projects() {
                 sizes="100vw"
                 style={{ width: '100%', height: 'auto' }}
               />
-            </Link>
             <div className="projects-container-projects-box-details">
               <h1>{project.name}</h1>
               <p>{project.description}</p>

@@ -1,9 +1,10 @@
 .project-container.light a {
   background-color: $darkMode;
-  color: white;
+  color: $lightMode;
 }
+
 .project-container.dark a {
-  background-color: white;
+  background-color: $lightMode;
   color: black;
 }
 
@@ -21,7 +22,7 @@
     align-items: stretch;
 
     &-details {
-      background-color: $blue-50;
+      background-color: $blue;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -75,16 +76,16 @@
     align-items: center;
     padding: 2rem;
     height: 100%;
-  
+
     &-box {
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
       width: 100%;
       gap: 0.5rem;
-  
+
       &-details {
-        background-color: $blue-50;
+        background-color: $blue;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -93,13 +94,13 @@
         width: 85%;
         height: 50%;
         border-radius: 1rem;
-  
+
         &-title {
           h1 {
             font-size: 2rem;
           }
         }
-  
+
         &-infos {
           p {
             text-align: center;
@@ -107,14 +108,14 @@
             font-weight: 600;
           }
         }
-  
+
         &-button {
           display: flex;
           justify-content: center;
           gap: 2.5rem;
           align-items: center;
           width: 100%;
-  
+
           a {
             display: flex;
             align-items: center;

@@ -1,11 +1,5 @@
 body .footer-container {
-  background-color: $blue-50;
-}
-
-.footer-fixed {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  background-color: $blue;
 }
 
 .footer-container {
@@ -41,9 +35,4 @@ body .footer-container {
     gap: 0.5rem;
   }
 
-  .footer-fixed {
-    position: relative;
-    left: 0;
-    bottom: 0;
-  }
 }

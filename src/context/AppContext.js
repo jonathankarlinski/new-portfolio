@@ -3,7 +3,6 @@ const AppContext = createContext();
 import PropTypes from 'prop-types';
 
 export const AppProvider = ({ children }) => {
-  const [notIndex, setNotIndex] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(null);
   const [darkMode, setdarkMode] = useState('dark');
@@ -50,15 +49,12 @@ export const AppProvider = ({ children }) => {
     isOpen,
     setTypeMenuOpen,
     setTypeMenuClose,
-    notIndex,
-    setNotIndex,
     windowWidth,
     setWindowWidth
   }), [
     darkMode,
     handleToggle,
     isOpen,
-    notIndex,
     typeMenuClose,
     typeMenuOpen,
     windowWidth

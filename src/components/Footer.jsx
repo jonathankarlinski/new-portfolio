@@ -1,16 +1,15 @@
 import React, { useContext } from 'react'
 import AppProvider from '../context/AppContext';
-import Image from 'next/image';
 import ButtonEmail from './ButtonEmail';
 import LinkSocial from './LinkSocial';
 
 
 function Footer() {
-  const { darkMode, notIndex } = useContext(AppProvider);
+  const { darkMode } = useContext(AppProvider);
 
   return (
     <section
-      className={`footer-container ${darkMode} ${!notIndex && 'footer-fixed'}`}
+      className={`footer-container ${darkMode}`}
       id='CONTATO'>
       <p>WEBSITE DESENVOLVIDO POR JONATHAN KARLINSKI</p>
       <div className="footer-container-contact">

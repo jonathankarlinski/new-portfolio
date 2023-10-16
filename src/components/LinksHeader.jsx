@@ -15,7 +15,6 @@ function LinksHeader() {
             <Image
               height={100}
               width={100}
-              priority
               src={`/images/${!isOpen ? typeMenuOpen : typeMenuClose}.png`}
               alt={`icone de menu ${!isOpen ? 'fechado' : 'aberto'}`}
             />

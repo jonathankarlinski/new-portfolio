@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 import AppProvider from '../context/AppContext';
-import { useRouter } from 'next/router';
 import Image from 'next/image'
 import LinksHeader from './LinksHeader';
 import { getCookie, setCookie } from '@/utils/cookies';
@@ -8,8 +7,7 @@ import ButtonEmail from './ButtonEmail';
 import LinkSocial from './LinkSocial';
 
 function Header() {
-  const { darkMode, setdarkMode, setTypeMenuOpen, setTypeMenuClose, notIndex, setNotIndex } = useContext(AppProvider);
-  const router = useRouter();
+  const { darkMode, setdarkMode, setTypeMenuOpen, setTypeMenuClose } = useContext(AppProvider);
 
   const typeMenu = () => {
     if (darkMode === 'dark') {
@@ -42,7 +40,7 @@ function Header() {
 
   return (
     <div id='HOME'>
-      <header className={`header-container ${darkMode} ${notIndex && 'header-fixed'}`}>
+      <header className={`header-container ${darkMode}`}>
         <LinksHeader />
         <button
           className={`${darkMode}`}
@@ -97,6 +95,7 @@ function Header() {
               width={500}
               height={500}
               alt="imagem do banner"
+              priority
             />
           </div>
         </div>

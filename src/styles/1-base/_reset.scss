@@ -12,10 +12,12 @@ html {
 }
 
 body.dark {
-  background-color: white;
+  background-color: $lightMode;
+
   h1 {
     color: $darkMode;
   }
+
   p {
     color: $darkMode;
   }
@@ -23,11 +25,13 @@ body.dark {
 
 body.light {
   background-color: $darkMode;
+
   h1 {
-    color: white;
+    color: $lightMode;
   }
+
   p {
-    color: white;
+    color: $lightMode;
   }
 }
 
