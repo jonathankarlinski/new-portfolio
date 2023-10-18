@@ -52,6 +52,11 @@ body .header-container {
   border: 0.3rem solid $lightMode;
 }
 
+.header-fixed {
+  position: fixed;
+  z-index: 1000;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -60,20 +65,6 @@ body .header-container {
   height: 5rem;
   padding: 1rem 5rem;
 
-  &-back {
-    padding: 1rem;
-
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    p {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-  }
 
   &-links {
     display: flex;
@@ -101,6 +92,11 @@ body .header-container {
       width: 100%;
     }
   }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+
 
   button.dark {
     border: 2px solid $darkMode;
@@ -147,6 +143,12 @@ body .header-container {
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
+
+        li {
+          :hover {
+            transform: scale(1.1);
+          }
+        }
 
         a {
           display: flex;

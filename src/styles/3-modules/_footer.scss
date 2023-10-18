@@ -22,6 +22,18 @@ body .footer-container {
     justify-content: center;
     align-items: center;
 
+    button {
+      :hover {
+        transform: scale(1.1);
+      }
+    }
+
+    a {
+      :hover {
+        transform: scale(1.1);
+      }
+    }
+
     h1 {
       font-size: 1.5rem;
       font-weight: 600;
