@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image';
 import clipboardCopy from 'clipboard-copy';
 
-
 function ButtonEmail() {
 
   const handleCopy = () => {

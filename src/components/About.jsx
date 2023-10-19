@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useContext } from 'react'
 import AppProvider from '../context/AppContext';
 
@@ -6,13 +7,20 @@ function About() {
 
   return (
     <section
-      className={`about-container ${darkMode}`} 
+      className={`about-container ${darkMode}`}
       id='SOBRE MIM'>
       <h1>SOBRE MIM</h1>
       <div className="about-container-box">
         <p>
-          Eu tenho 24 anos, atualmente moro em Porto alegre no Rio Grande do Sul. Sou uma pessoa extremamente comunicativa e extrovertida,  no meu tempo livre gosto de jogos,  ver filmes, series e tudo que me apresente novas coisas. Conheci na programação maneiras de criar e utilizar ferramentas para desenvolver projetos incríveis que são maravilhosas conquistas para mim e com isso vi o que quero para meu futuro, que é trabalhar com tecnologia para desenvolver projetos de que me orgulharei no futuro.
+        Olá, sou Jonathan, um desenvolvedor web se especializado em front-end. Tenho ampla experiência em tecnologias como <span>React.js</span>, <span>JavaScript</span>, <span>HTML</span>, <span>CSS</span>. Meus projetos estão disponíveis via <span>GitHub Pages</span> e <span>Vercel</span>, onde você pode conferir meus trabalhos na parte de projetos. No momento, estou aprimorando minhas habilidades em <span>Next.js</span>, <span>Styled-Components</span> e <span>Material UI</span>. Estou comprometido em aperfeiçoar meu conhecimento e criar experiências web excepcionais.
         </p>
+        <Image 
+        src={`/images/minhaFoto.jpeg`}
+        width={300}
+        height={300}
+        alt="minha foto"
+        priority
+        />
       </div>
     </section>
   );

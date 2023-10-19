@@ -8,8 +8,8 @@ function Projects() {
 
   return (
     <section
-      className={`projects-container ${darkMode}`}
       id="PROJETOS"
+      className={`projects-container ${darkMode}`}
     >
       <h1>PROJETOS</h1>
       <div className="projects-container-projects">
@@ -17,15 +17,15 @@ function Projects() {
           <div
             key={project.id}
             className="projects-container-projects-box">
-              <Image
-                className={'projects-container-projects-box-img'}
-                src={`/images/${project.thumbnail}.png`}
-                alt={`Imagem do Projeto ${project.name}`}
-                width="0"
-                height="0"
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-              />
+            <Image
+              className={'projects-container-projects-box-img'}
+              src={`/images/${project.thumbnail}.png`}
+              alt={`Imagem do Projeto ${project.name}`}
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+            />
             <div className="projects-container-projects-box-details">
               <h1>{project.name}</h1>
               <p>{project.description}</p>

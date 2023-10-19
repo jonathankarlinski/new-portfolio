@@ -3,12 +3,11 @@ import AppProvider from '../context/AppContext';
 import ButtonEmail from './ButtonEmail';
 import LinkSocial from './LinkSocial';
 
-
 function Footer() {
   const { darkMode } = useContext(AppProvider);
 
   return (
-    <section
+    <footer
       className={`footer-container ${darkMode}`}
       id='CONTATO'>
       <p>WEBSITE DESENVOLVIDO POR JONATHAN KARLINSKI</p>
@@ -28,7 +27,7 @@ function Footer() {
           />
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 

@@ -40,7 +40,7 @@ function Header() {
 
   return (
     <div id='HOME'>
-      <header className={`header-container ${darkMode}`}>
+      <header className={`header-container ${darkMode} header-fixed`}>
         <LinksHeader />
         <button
           className={`${darkMode}`}
