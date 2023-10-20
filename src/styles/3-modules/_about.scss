@@ -4,8 +4,7 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 3rem;
-  margin-top: 2.5rem;
+  min-height: 90vh;
 
   h1 {
     font-size: 3rem;
@@ -39,7 +38,7 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .about-container {
     padding-top: 2rem;
 

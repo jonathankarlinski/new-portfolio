@@ -113,11 +113,10 @@ body .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 114vh;
   width: 100%;
 
   &-div {
-    margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,8 +234,10 @@ body .header-container {
 
 @media screen and (max-width: 500px) {
   .header-container-banner {
+    min-height: 113vh;
+
+
     &-div {
-      margin-top: 4rem;
       flex-direction: column-reverse;
 
       &-text {
