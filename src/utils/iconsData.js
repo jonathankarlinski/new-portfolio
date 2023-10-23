@@ -12,6 +12,7 @@ import {
   SiReactrouter,
   SiRedux,
   SiSass,
+  SiStyledcomponents,
   SiTestinglibrary,
   SiTypescript
 } from "react-icons/si";
@@ -108,6 +109,18 @@ export const iconsData = [
     testingLibrary: {
       icon: <SiTestinglibrary />,
       name: 'Testing Library',
+    }
+  },
+  {
+    styledComponents: {
+      icon: <SiStyledcomponents />,
+      name: 'Styled-Components',
+    }
+  },
+  {
+    contextApi: {
+      icon: <SiReact />,
+      name: 'ContextApi',
     }
   }
 ]
