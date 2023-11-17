@@ -28,11 +28,11 @@ body .header-container {
   color: $lightMode;
 }
 
-.light li a:hover {
+.header-container.light li a:hover {
   color: $darkMode;
 }
 
-.dark li a:hover {
+.header-container.dark li a:hover {
   color: $lightMode;
 }
 
