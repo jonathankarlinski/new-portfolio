@@ -2,19 +2,24 @@ import {
   SiChai,
   SiCss3,
   SiDocker,
+  SiFigma,
   SiHtml5,
   SiJavascript,
   SiMocha,
   SiMongodb,
   SiMongoose,
+  SiNextdotjs,
   SiNodedotjs,
   SiReact,
   SiReactrouter,
+  SiRedis,
   SiRedux,
   SiSass,
   SiStyledcomponents,
+  SiTailwindcss,
   SiTestinglibrary,
-  SiTypescript
+  SiTypescript,
+  SiVercel
 } from "react-icons/si";
 
 
@@ -121,6 +126,36 @@ export const iconsData = [
     contextApi: {
       icon: <SiReact />,
       name: 'ContextApi',
+    }
+  },
+  {
+    next: {
+      icon: <SiNextdotjs />,
+      name: 'Next.js',
+    }
+  },
+  {
+    tailwind: {
+      icon: <SiTailwindcss />,
+      name: 'Tailwind',
+    }
+  },
+  {
+    figma: {
+      icon: <SiFigma />,
+      name: 'Figma',
+    }
+  },
+  {
+    VercelKV: {
+      icon: <SiVercel />,
+      name: 'Vercel KV',
+    }
+  },
+  {
+    redis: {
+      icon: <SiRedis />,
+      name: 'Redis',
     }
   }
 ]

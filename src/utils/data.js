@@ -1,5 +1,20 @@
 export const projectsData = [
   {
+    name: "Gerenciador de Hábitos",
+    thumbnail: 'thumbnailGerenciador_de_Habitos',
+    icons: [
+      'next',
+      'tailwind',
+      'VercelKV',
+      'redis',
+      'figma',
+      'typesCript'
+    ],
+    description: `Neste projeto, desenvolvi uma aplicação mobile-first que possui uma página inicial com lista de hábitos, exibindo os últimos 7 dias com indicadores visuais (check para feito, "x" para não feito, bolinha cinza para não marcado). Permite excluir hábitos, redirecionar para detalhes ao clicar em um hábito e adicionar novos hábitos na página de cadastro. A página de detalhes mostra o nome do hábito, com botão de retorno à tela inicial. Inclui um calendário que, ao navegar entre os meses, apresenta indicadores visuais para marcar ou desmarcar hábitos ao clicar em um dia.`,
+    linkProject: "https://gerenciador-habitos-vert.vercel.app/",
+    linkRepository: "https://github.com/jonathankarlinski/gerenciador-habitos",
+  },
+  {
     name: "StarWars Planets",
     thumbnail: 'thumbnailStarWars_Planets',
     icons: [
@@ -24,7 +39,7 @@ export const projectsData = [
       'javaScript',
       'html',
     ],
-    description: "Nesse projeto desenvolvi uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.",
+    description: "Nesse projeto, desenvolvi uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.",
     linkProject: "https://jonathankarlinski.github.io/trybetunes/#/",
     linkRepository: "https://github.com/jonathankarlinski/trybetunes",
   },
@@ -66,7 +81,7 @@ export const projectsData = [
       'css',
       'javaScript',
     ],
-    description: "Nesse projeto desenvolvi uma página web que contem uma paleta de cores funcional que será utilizada para criar art em pixel. O usuário poderá definir o tamanho da tela como também gerar cores aleatórias.",
+    description: "Nesse projeto, desenvolvi uma página web que contem uma paleta de cores funcional que será utilizada para criar art em pixel. O usuário poderá definir o tamanho da tela como também gerar cores aleatórias.",
     linkProject: "https://jonathankarlinski.github.io/pixels-art/",
     linkRepository: "https://github.com/jonathankarlinski/pixels-art"
   },
@@ -82,7 +97,7 @@ export const projectsData = [
       'mongodb',
       'mongoose',
     ],
-    description: "Nesse projeto foi desenvolvida uma API para gerenciar uma concessionária de veículos, utilizando o banco de dados MongoDB através do framework Mongoose. Foram aplicados os princípios de Programação Orientada a Objetos (POO).",
+    description: "Nesse projeto, foi desenvolvida uma API para gerenciar uma concessionária de veículos, utilizando o banco de dados MongoDB através do framework Mongoose. Foram aplicados os princípios de Programação Orientada a Objetos (POO).",
     linkRepository: "https://github.com/jonathankarlinski/car-shop",
   }
 ];

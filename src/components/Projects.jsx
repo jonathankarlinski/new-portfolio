@@ -44,14 +44,15 @@ function Projects() {
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{  height: 'auto' }}
+                style={{ height: 'auto' }}
               />
               <div className="projects-container-projects-box-details">
                 <h1>{project.name}</h1>
                 <p>{project.description}</p>
                 <div className={`projects-container-projects-box-details-icons ${darkMode}`}>
                   {mapProjectIcons(project).map((tech) => (
-                    <span key={tech.name}>{tech.icon}
+                    <span key={tech.name}>
+                      {tech.icon}
                       <p>{tech.name}</p>
                     </span>
                   ))}
