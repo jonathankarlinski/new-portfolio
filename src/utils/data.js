@@ -8,11 +8,27 @@ export const projectsData = [
       'VercelKV',
       'redis',
       'figma',
-      'typesCript'
+      'typerScipt'
     ],
     description: `Neste projeto, desenvolvi uma aplicação mobile-first que possui uma página inicial com lista de hábitos, exibindo os últimos 7 dias com indicadores visuais (check para feito, "x" para não feito, bolinha cinza para não marcado). Permite excluir hábitos, redirecionar para detalhes ao clicar em um hábito e adicionar novos hábitos na página de cadastro. A página de detalhes mostra o nome do hábito, com botão de retorno à tela inicial. Inclui um calendário que, ao navegar entre os meses, apresenta indicadores visuais para marcar ou desmarcar hábitos ao clicar em um dia.`,
     linkProject: "https://gerenciador-habitos-vert.vercel.app/",
     linkRepository: "https://github.com/jonathankarlinski/gerenciador-habitos",
+  },
+  {
+    name: "WebCam Emotions",
+    thumbnail: 'thumbnailWebCam_Emotions',
+    icons: [
+      'vite',
+      'react',
+      'javaScript',
+      'reactWebcam',
+      'html',
+      'figma',
+      'faceApi',
+    ],
+    description: `Neste projeto, desenvolvi uma aplicação que você poderá ver em tempo real, por meio de sua webcam, como as expressões faciais se relacionam com diferentes emoções, como felicidade, tristeza, surpresa e raiva.`,
+    linkProject: "https://webcam-emotions-jonathankarlinski.vercel.app/",
+    linkRepository: "https://github.com/jonathankarlinski/webcam-emotions",
   },
   {
     name: "StarWars Planets",
@@ -89,7 +105,7 @@ export const projectsData = [
     name: "CarShop",
     thumbnail: 'imgCarShop',
     icons: [
-      'typesCript',
+      'typerScipt',
       'docker',
       'node',
       'chai',

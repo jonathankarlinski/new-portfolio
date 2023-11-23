@@ -19,10 +19,11 @@ import {
   SiTailwindcss,
   SiTestinglibrary,
   SiTypescript,
-  SiVercel
+  SiVercel,
+  SiVite
 } from "react-icons/si";
 
-
+import { LuWebcam } from "react-icons/lu";
 export const iconsData = [
   {
     react: {
@@ -61,7 +62,7 @@ export const iconsData = [
     }
   },
   {
-    typesCript: {
+    typerScipt: {
       icon: <SiTypescript />,
       name: 'Type Script',
     }
@@ -156,6 +157,24 @@ export const iconsData = [
     redis: {
       icon: <SiRedis />,
       name: 'Redis',
+    }
+  },
+  {
+    vite: {
+      icon: <SiVite />,
+      name: 'Vite',
+    }
+  },
+  {
+    reactWebcam: {
+      icon: <SiReact />,
+      name: 'React WebCam',
+    }
+  },
+  {
+    faceApi: {
+      icon: <LuWebcam />,
+      name: 'FaceApi',
     }
   }
 ]
