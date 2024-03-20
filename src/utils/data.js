@@ -1,5 +1,19 @@
 export const projectsData = [
   {
+    name: "Jogo da Memória",
+    thumbnail: 'thumbnailJogoMemoria',
+    icons: [
+      'react',
+      'reactDom',
+      'typerScipt',
+      'tailwind',
+      'reactFlip',
+    ],
+    description: `Explore o mundo de Dragon Ball Z com nosso jogo da memória! Encontre os pares de cartas dos personagens favoritos enquanto o tempo corre contra você. Vença o desafio e se divirta com uma página de erro 404 única. Está pronto para o desafio?`,
+    linkProject: "https://jogo-da-memoria-phi-seven.vercel.app/",
+    linkRepository: "https://github.com/jonathankarlinski/jogo-da-memoria",
+  },
+  {
     name: "Gerenciador de Hábitos",
     thumbnail: 'thumbnailGerenciador_de_Habitos',
     icons: [
@@ -36,12 +50,11 @@ export const projectsData = [
     icons: [
       'react',
       'styledComponents',
-      'testingLibrary',
       'contextApi',
-      'javaScript',
-      'html',
+      'reactHook',
+      'testingLibrary',
     ],
-    description: "Neste projeto, desenvolvi uma lista de planetas do universo de Star Wars com recursos de filtragem, usando a Context API e Hooks para gerenciar o estado global. O projeto possui uma cobertura de testes completa, garantindo a qualidade e a confiabilidade do código.",
+    description: "Explore os planetas do universo Star Wars com facilidade usando nossa lista interativa e filtrável. Desenvolvemos uma experiência intuitiva e envolvente, onde você pode navegar pelos planetas da saga usando filtros personalizados. Prepare-se para mergulhar no vasto universo de Star Wars enquanto navega pelos planetas mais icônicos da galáxia!.",
     linkProject: "https://jonathankarlinski.github.io/starwars-planets/",
     linkRepository: "https://github.com/jonathankarlinski/starwars-planets",
   },

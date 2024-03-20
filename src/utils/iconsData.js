@@ -176,5 +176,23 @@ export const iconsData = [
       icon: <LuWebcam />,
       name: 'FaceApi',
     }
-  }
+  },
+  {
+    reactDom: {
+      icon: <SiReact />,
+      name: 'React Router Dom',
+    }
+  },
+  {
+    reactFlip: {
+      icon: <SiReact />,
+      name: 'React Card Flip',
+    }
+  },
+  {
+    reactHook: {
+      icon: <SiReact />,
+      name: 'React Hook',
+    }
+  },
 ]
