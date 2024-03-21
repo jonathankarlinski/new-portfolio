@@ -77,12 +77,11 @@ export const projectsData = [
     thumbnail: 'thumbnailLeague_of_Trunfo',
     icons: [
       'react',
-      'reactRouter',
       'javaScript',
       'css',
       'html',
     ],
-    description: "Neste projeto estilo Super Trunfo com tema de League of Legends, os usuários poderão criar cartas personalizadas com o tema de sua escolha. Além disso, será possível adicionar ou remover cartas desse baralho, proporcionando uma experiência de customização completa. Os jogadores também terão a facilidade de visualizar todas as cartas que foram adicionadas ao seu baralho, tornando a experiência de criação e gerenciamento de decks ainda mais envolvente e divertida.",
+    description: "Prepare-se para uma experiência de jogo emocionante no estilo Super Trunfo! Com esta aplicação, os jogadores podem criar seu próprio baralho personalizado, adicionando e removendo cartas de acordo com sua preferência. Explore uma variedade de temas e crie baralhos únicos e empolgantes.",
     linkProject: "https://jonathankarlinski.github.io/league-of-trunfo/",
     linkRepository: "https://github.com/jonathankarlinski/league-of-trunfo#league-of-trunfo",
   },
