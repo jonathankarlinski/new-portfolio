@@ -20,7 +20,8 @@ import {
   SiTestinglibrary,
   SiTypescript,
   SiVercel,
-  SiVite
+  SiVite,
+  SiItunes
 } from "react-icons/si";
 
 import { LuWebcam } from "react-icons/lu";
@@ -56,9 +57,9 @@ export const iconsData = [
     }
   },
   {
-    sass: {
+    scss: {
       icon: <SiSass />,
-      name: 'SASS',
+      name: 'SCSS',
     }
   },
   {
@@ -193,6 +194,12 @@ export const iconsData = [
     reactHook: {
       icon: <SiReact />,
       name: 'React Hook',
+    }
+  },
+  {
+    apiITunes: {
+      icon: <SiItunes />,
+      name: 'API ITunes',
     }
   },
 ]
