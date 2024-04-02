@@ -104,11 +104,12 @@ export const projectsData = [
     name: "Pixel Art",
     thumbnail: 'thumbnailPixel_Art',
     icons: [
+      'javaScript',
       'html',
       'css',
-      'javaScript',
+      'dom'
     ],
-    description: "Nesse projeto, desenvolvi uma página web que contem uma paleta de cores funcional que será utilizada para criar art em pixel. O usuário poderá definir o tamanho da tela como também gerar cores aleatórias.",
+    description: "Explore sua criatividade com Pixel Art, nosso editor de arte de pixels! Com este projeto, os usuários podem escolher cores de uma paleta e pintar livremente em um quadro em branco. Deixe sua imaginação fluir e crie obras de arte únicas e coloridas. Uma experiência simples e divertida para os amantes da arte!",
     linkProject: "https://jonathankarlinski.github.io/pixels-art/",
     linkRepository: "https://github.com/jonathankarlinski/pixels-art"
   },

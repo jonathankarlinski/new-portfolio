@@ -25,6 +25,7 @@ import {
 } from "react-icons/si";
 
 import { LuWebcam } from "react-icons/lu";
+import { ImTree } from "react-icons/im";
 export const iconsData = [
   {
     react: {
@@ -200,6 +201,12 @@ export const iconsData = [
     apiITunes: {
       icon: <SiItunes />,
       name: 'API ITunes',
+    }
+  },  
+  {
+    dom: {
+      icon: <ImTree />,
+      name: 'Document Object Model (DOM)',
     }
   },
 ]
