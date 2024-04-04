@@ -5,7 +5,7 @@
 
 .projects-container.dark a {
   background-color: $lightMode;
-  color: black;
+  color: $darkMode;
 }
 
 .projects-container-projects-box-details-icons.light span {
@@ -13,8 +13,17 @@
 }
 
 .projects-container-projects-box-details-icons.dark span {
-  color: black;
+  color: $darkMode;
 }
+
+.projects-container-projects-box-details-icons.light small {
+  color: $lightMode;
+}
+
+.projects-container-projects-box-details-icons.dark small {
+  color: $darkMode;
+}
+
 
 .projects-container {
   display: flex;
@@ -65,6 +74,7 @@
           border-radius: 0.5rem;
           text-align: center;
           width: 100%;
+          padding: 0.5rem;
         }
 
         &-icons {
@@ -72,14 +82,16 @@
           flex-flow: row wrap;
           justify-content: center;
           width: 100%;
-          gap: 0.2rem;
-
+          gap: 0.5rem;
+          font-size: 1.1rem;
+          font-weight: 600;
           span {
             display: flex;
             background-color: #92949A;
             gap: 0.3rem;
             padding: 0.3rem;
             border-radius: 0.55rem;
+            padding: 0.4rem;
           }
         }
 
@@ -100,6 +112,11 @@
             font-size: 1rem;
             height: 2.5rem;
             padding: 1rem;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+
           }
         }
       }

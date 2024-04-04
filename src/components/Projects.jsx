@@ -53,7 +53,7 @@ function Projects() {
                   {mapProjectIcons(project).map((tech) => (
                     <span key={tech.name}>
                       {tech.icon}
-                      <p>{tech.name}</p>
+                      <small>{tech.name}</small>
                     </span>
                   ))}
                 </div>
