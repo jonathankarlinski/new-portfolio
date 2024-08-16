@@ -1,10 +1,7 @@
-body .header-container {
-  background-color: $blue;
-}
-
 .header-container.light {
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px inset, 
+  rgba(200, 200, 230, 0.25) 0px 50px 100px -20px,
+  rgba(150, 150, 150, 0.2) 0px 30px 60px -30px;
 }
 
 .header-container.dark {
@@ -55,198 +52,213 @@ body .header-container {
 .header-fixed {
   position: fixed;
   z-index: 1000;
+  background-color: $blue;
+
 }
 
-.header-container {
+#Home {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  height: 100vh;
+  // min-width: 100vw;
   width: 100%;
-  height: 5rem;
-  padding: 1rem 5rem;
+  background-color: $blue;
 
 
-  &-links {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 1rem;
-    cursor: pointer;
-
-    a {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-  }
-
-  button {
-    background: none;
-    border: none;
-    border-radius: 1rem;
-    height: 2.5rem;
-    width: 2.5rem;
-    cursor: pointer;
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  button:hover {
-    transform: scale(1.1);
-  }
-
-
-  button.dark {
-    border: 2px solid $darkMode;
-    background-color: $darkMode;
-  }
-
-  button.light {
-    border: 2px solid $lightMode;
-    background-color: $lightMode;
-  }
-}
-
-.header-container-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 114vh;
-  width: 100%;
-
-  &-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $blue;
-    width: 100%;
-
-    &-text {
-      font-size: 2rem;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-      gap: 1.5rem;
-
-      b {
-        font-size: 2.5rem;
-      }
-
-      ul {
-        padding: 0 2rem;
-        border-radius: 5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-
-        li {
-          :hover {
-            transform: scale(1.1);
-          }
-        }
-
-        a {
-          display: flex;
-          align-items: center;
-        }
-
-      }
-    }
-
-    &-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-    }
-  }
-}
-
-@media only screen and (max-width: 800px) {
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 5rem;
-    padding: 0 1.5rem;
-  }
+    height: 6rem;
+    padding: 3rem 5rem;
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+    &-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      list-style: none;
+      gap: 1rem;
+      cursor: pointer;
 
-  .dropdown-button {
-    padding: 8px 16px;
-  }
+      a {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
 
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: $blue;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 8px;
-  }
+    button {
+      background: none;
+      border: none;
+      border-radius: 1.2rem;
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
 
-  .dropdown-item {
-    cursor: pointer;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
 
-    display: block;
-    padding: 3px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    button:hover {
+      transform: scale(1.1);
+    }
+
+
+    button.dark {
+      border: 2px solid $darkMode;
+      background-color: $darkMode;
+    }
+
+    button.light {
+      border: 2px solid $lightMode;
+      background-color: $lightMode;
+    }
   }
 
   .header-container-banner {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     width: 100%;
+    height: 100%;
 
     &-div {
-      flex-direction: column-reverse;
+      background-color: $blue;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
 
       &-text {
-        font-size: 1.6rem;
-        gap: 0.5rem;
-        padding-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
 
         b {
-          font-size: 2rem;
+          font-size: 3.5rem;
+          padding-left: 0.5rem;
         }
-      }
 
-      &-image {
-        img {
-          width: 100%;
+        ul {
+          padding: 0 2rem;
+          border-radius: 5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.5rem;
+
+          li {
+            :hover {
+              transform: scale(1.1);
+            }
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+          }
+
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 500px) {
-  .header-container-banner {
-    min-height: 113vh;
 
-
-    &-div {
-      flex-direction: column-reverse;
-
-      &-text {
-        font-size: 1.6rem;
-        gap: 0.5rem;
-        padding-bottom: 1rem;
-
-        b {
+@media only screen and (max-width: 1100px) {
+  #Home {
+    .header-container-banner {
+      &-div {
+        &-text {
+          text-align: center;
           font-size: 2rem;
+
+          b {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #Home {
+    .header-container {
+      a {
+        font-size: 1.6rem;
+      }
+    }
+
+    .header-container-banner {
+      &-div {
+        flex-direction: column-reverse;
+
+        &-text {
+          text-align: center;
+          font-size: 2rem;
+
+          b {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #Home {
+    .header-container {
+      height: 5rem;
+      padding: 0 1.5rem;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-button {
+      padding: 8px 16px;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $blue;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 8px;
+    }
+
+    .dropdown-item {
+      cursor: pointer;
+
+      display: block;
+      padding: 3px;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .header-container-banner {
+      margin-top: 4rem;
+
+      &-div {
+        &-text {
+          font-size: 1.6rem;
+          gap: 0.5rem;
+
+
+          b {
+            font-size: 2rem;
+          }
         }
       }
     }

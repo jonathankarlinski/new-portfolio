@@ -7,7 +7,7 @@ import ButtonEmail from './ButtonEmail';
 import LinkSocial from './LinkSocial';
 
 function Header() {
-  const { darkMode, setdarkMode, setTypeMenuOpen, setTypeMenuClose } = useContext(AppProvider);
+  const { darkMode, setdarkMode, setTypeMenuOpen, setTypeMenuClose, windowWidth } = useContext(AppProvider);
 
   const typeMenu = () => {
     if (darkMode === 'dark') {
@@ -39,8 +39,8 @@ function Header() {
   }
 
   return (
-    <div id='HOME'>
-      <header className={`header-container ${darkMode} header-fixed`}>
+    <div id='Home'>
+            <header className={`header-container ${darkMode} header-fixed`}>
         <LinksHeader />
         <button
           className={`${darkMode}`}
@@ -62,11 +62,17 @@ function Header() {
             <p>
               Olá, Tudo bem?
               <br />
+              Me chamo
               <b>
-                Eu sou desenvolvedor web
+                Jonathan Karlinski
               </b>
               <br />
-              e este é meu portfólio
+              sou desenvolvedor web
+              <br />
+              e este é meu 
+              <b>
+              portfólio
+              </b>
             </p>
             <ul>
               <li>
@@ -92,8 +98,8 @@ function Header() {
           >
             <Image
               src={`/images/ImageBanner.png`}
-              width={500}
-              height={500}
+              width={`${windowWidth < 420 && windowWidth > 0 ? 350 : 500}`}
+              height={`${windowWidth < 420 && windowWidth > 0 ? 350 : 500}`}
               alt="imagem do banner"
               priority
             />

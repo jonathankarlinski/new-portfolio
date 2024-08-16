@@ -9,7 +9,7 @@ function LinksHeader() {
 
   return (
     <>
-      {windowWidth < 800 && windowWidth > 0 ? (
+      {windowWidth < 750 && windowWidth > 0 ? (
         <div className="header-container-dropdown">
           <button className="header-container-dropdown-button" onClick={handleToggle}>
             <Image

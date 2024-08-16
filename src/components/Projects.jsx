@@ -27,7 +27,7 @@ function Projects() {
 
   return (
     <section
-      id="PROJETOS"
+      id="Projetos"
       className={`projects-container ${darkMode}`}
     >
       <h1>PROJETOS</h1>

@@ -9,10 +9,9 @@ function Footer() {
   return (
     <footer
       className={`footer-container ${darkMode}`}
-      id='CONTATO'>
+      id='Contato'>
       <p>WEBSITE DESENVOLVIDO POR JONATHAN KARLINSKI</p>
       <div className="footer-container-contact">
-        <h1>CONTATO</h1>
         <div className="footer-container-contact-icon">
           <ButtonEmail />
           <LinkSocial

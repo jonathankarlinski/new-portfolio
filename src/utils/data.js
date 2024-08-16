@@ -131,15 +131,18 @@ export const projectsData = [
 
 export const itensButtonHeader = [
   {
-    name: 'HOME',
+    name: 'Home',
+
   },
   {
-    name: 'PROJETOS',
+    name: 'Sobre',
+
   },
   {
-    name: 'SOBRE MIM',
+    name: 'Projetos',
+
   },
   {
-    name: 'CONTATO',
+    name: 'Contato',
   }
 ];

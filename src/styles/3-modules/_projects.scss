@@ -32,7 +32,7 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
 
   h1 {
     font-size: 3.5rem;
@@ -124,19 +124,12 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  .projects-container {
-    padding-top: 2rem;
-  }
-
-}
-
 @media screen and (max-width: 900px) {
   .projects-container {
     padding-top: 2rem;
 
     &-projects {
-      width: 70%;
+      width: 85%;
       height: 100%;
 
       &-box {
@@ -155,9 +148,6 @@
 
         &-details {
           border-radius: 1rem;
-
-          width: 100%;
-          height: 100%;
 
           &-button {
             justify-content: space-around;
