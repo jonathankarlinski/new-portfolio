@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@vercel/analytics": "^1.0.1",
     "clipboard-copy": "^4.0.1",
     "eslint": "8.43.0",

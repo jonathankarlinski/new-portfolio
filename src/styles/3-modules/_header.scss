@@ -61,7 +61,6 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  // min-width: 100vw;
   width: 100%;
   background-color: $blue;
 
@@ -126,7 +125,6 @@
     height: 100%;
 
     &-div {
-      background-color: $blue;
       display: flex;
       align-items: center;
       justify-content: space-around;

@@ -61,7 +61,6 @@ button {
   cursor: pointer;
 }
 
-input {
-  outline: none;
-  border: 1.5px solid #000;
+input, textarea {
+  font-family: "Asap";
 }
