@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import emailjs from '@emailjs/browser'
 import AppProvider from '../context/AppContext';
-import { contact } from '@/utils/secret';
 
 
 function Contact() {
@@ -22,7 +21,7 @@ function Contact() {
       email: email
     }
 
-    emailjs.send(contact.service, contact.template, templateParams, contact.token)
+    emailjs.send("service_5210xtp", "template_5o0sbaq", templateParams, "gJV239Je12S6fRruX")
       .then((_response) => {
         alert("Email enviado com sucesso");
 
